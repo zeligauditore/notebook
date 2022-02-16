@@ -57,6 +57,7 @@ module.exports = {
           children: [
             '',
             'using-vue',
+            'git',
           ]
         }
       ],
