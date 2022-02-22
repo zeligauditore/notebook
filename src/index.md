@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://icons-for-free.com/iconfiles/png/512/Coding-1320568096072194118.png
+heroImage: img/star.png
 tagline:
 ---
 

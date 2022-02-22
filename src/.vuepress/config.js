@@ -37,16 +37,20 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guias',
+        text: 'Guias de código y otras herramientas',
         link: '/guide/',
       },
       {
-        text: 'Templates',
+        text: 'Plantillas de Diseño Web',
         link: '/templates/'
       },
       {
         text: 'Plugins',
         link: '/plugins/'
+      },
+      {
+        text: 'Guias y Tutoriales',
+        link: '/tutorials/'
       }
     ],
     sidebar: {
@@ -56,8 +60,14 @@ module.exports = {
           collapsable: true,
           children: [
             '',
-            'using-vue',
             'git',
+          ]
+        },
+        {
+          title: 'CSS',
+          collapsable: true,
+          children: [
+            'css/flexbox.md',
           ]
         }
       ],
@@ -76,6 +86,23 @@ module.exports = {
           collapsable: true,
           children: [
             '',
+          ]
+        }
+      ],
+      '/tutorials/': [
+        {
+          title: 'Linux',
+          collapsable: true,
+          children: [
+            '',
+            'linux',
+          ]
+        },
+        {
+          title: 'Android',
+          collapsable: true,
+          children: [
+            'android/android.md',
           ]
         }
       ],
