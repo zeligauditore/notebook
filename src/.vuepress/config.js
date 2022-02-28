@@ -7,7 +7,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Guias, PlugIns y Templates',
+  title: 'Guias',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -37,11 +37,11 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guias de código y otras herramientas',
+        text: 'Código y Herramientas',
         link: '/guide/',
       },
       {
-        text: 'Plantillas de Diseño Web',
+        text: 'Plantillas Diseño Web',
         link: '/templates/'
       },
       {
@@ -77,6 +77,7 @@ module.exports = {
           collapsable: true,
           children: [
             '',
+            'components/buttons.md',
           ]
         }
       ],
@@ -91,11 +92,18 @@ module.exports = {
       ],
       '/tutorials/': [
         {
-          title: 'Linux',
+          title: 'Wordpress & MarkDown',
           collapsable: true,
           children: [
             '',
-            'linux',
+          ]
+        },
+        {
+          title: 'Linux',
+          collapsable: true,
+          children: [
+            'linux/general.md',
+            'linux/linux.md',
           ]
         },
         {
