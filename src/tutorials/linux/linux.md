@@ -81,3 +81,28 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 ```
+
+## Instalando y configurando JellyFin
+
+Clonar el repositorio desde AUR
+```bash
+git clone https://aur.archlinux.org/jellyfin.git
+```
+
+Instalar:
+```bash
+cd jellyfin
+makepkg -si
+```
+
+Iniciar el servidor:
+```bash
+sudo systemctl start jellyfin
+```
+
+Habilitar el servidor para que se inicie automaticamente:
+```bash
+sudo systemctl enable jellyfin.service
+```
+
+Acceder al servidor en la [ip `http://192.168.100.7:8096/`](http://192.168.100.7:8096/)

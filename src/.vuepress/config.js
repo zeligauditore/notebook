@@ -61,6 +61,8 @@ module.exports = {
           children: [
             '',
             'git',
+            'ssh',
+            'docker',
           ]
         },
         {
@@ -77,7 +79,20 @@ module.exports = {
           collapsable: true,
           children: [
             '',
+          ]
+        },
+        {
+          title: 'Componentes',
+          collapsable: true,
+          children: [
             'components/buttons.md',
+          ]
+        },
+        {
+          title: 'Funciones especiales',
+          collapsable: true,
+          children: [
+            'functions/waByDate.md',
           ]
         }
       ],
