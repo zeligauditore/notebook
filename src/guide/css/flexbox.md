@@ -118,6 +118,26 @@ Para lograr repartirse en varias líneas añada la propiedad `flex-wrap` con el 
 
 Esto permite "envolver" los items y prevenir que se salgan del margen (Overflow).  
 
+### Wrap
+Los elementos flex son colocados en varias líneas. El valor cross-start equivale a start o before dependiendo del valor `flex-direction` y cross-end implicaría lo opuesto a lo especificado por cross-start.  
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+<img :src="$withBase('/img/flexbox/flex-wrap.png')">  
+
+### Wrap-reverse
+Actúa como `wrap` pero cross-start y cross-end están intercambiados.
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+```
+<img :src="$withBase('/img/flexbox/flex-wrap-reverse.png')">
+
 ### Nowrap
 Los elementos flex son distribuidos en una sola línea, lo cual puede llevar a que se desborde el contenedor flex. (default)  
 ```css
@@ -127,3 +147,193 @@ Los elementos flex son distribuidos en una sola línea, lo cual puede llevar a q
 }
 ```
 <img :src="$withBase('/img/flexbox/flex-wrap-nowgrap.png')">
+
+## Justify-content
+Define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje **horizontal** de su contenedor.
+
+### Flex-start
+Los items flex se colocan comenzando desde el comienzo principal. El margen del primer item es alineado al ras con el borde del comienzo principal de la línea y cada item siguiente es alineado al ras con el precedente. (default)
+```css
+.container {
+  display: flex;
+  justify-content: flex-start;
+}
+```
+<img :src="$withBase('/img/flexbox/flex-start.png')">
+
+### Flex-end
+Los items flex se colocan comenzando desde el final principal. El margen del último item es alineado al ras con el borde del final principal de la línea y cada item precedente es alineado al ras con el siguiente.
+```css
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+```
+<img :src="$withBase('/img/flexbox/flex-end.png')">
+
+### Center
+Los items flex son colocados hacia el centro de la línea. Los items flex se alinean al ras entre sí y en torno al centro de la línea. El espacio entre el borde del comienzo principal de la línea y el primer item es el mismo que el espacio entre el borde del final principal y el último item de la línea.
+```css
+.container {
+  display: flex;
+  justify-content: center;
+}
+```
+<img :src="$withBase('/img/flexbox/jc-center.png')">
+
+### Space-between
+Los items flex se distribuyen uniformemente sobre la línea. El espaciamiento se hace de tal manera que el espacio adyacente entre dos items es el mismo. El borde del comienzo principal y el borde del final principal se alinean al ras con el borde del primer y último item respectivamente.
+```css
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+```
+<img :src="$withBase('/img/flexbox/jc-space-between.png')">
+
+### Space-around
+Los items flex se alinean uniformemente de tal manera que el espacio entre dos items adyacentes es el mismo. El espacio vacío anterior al primer item y posterior al último item equivale a la mitad del espacio entre dos items adyacentes.
+```css
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+```
+<img :src="$withBase('/img/flexbox/jc-space-around.png')">
+
+### Space-evenly
+```css
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+```
+<img :src="$withBase('/img/flexbox/jc-space-evenly.png')">
+
+
+## Align-items
+La propiedad `align-items` establece el valor `align-self` sobre todos los descendientes directos de un grupo. La propiedad `align-self` indica la alineación de un elemento dentro del contenedor que lo contiene. En Flexbox controla la alineación de los elementos de manera **vertical**  
+
+### Flex-start (default)
+Alinea todos los elementos dentro al `top` del contenedor
+```css
+.container {
+  display: flex;
+  align-items:flex-start;
+}
+```
+<img :src="$withBase('/img/flexbox/ai-flex-start.png')">
+
+### Flex-end
+Alinea todos los elementos dentro al `bottom` del contenedor
+```css
+.container {
+  display: flex;
+  align-items:flex-end;
+}
+```
+<img :src="$withBase('/img/flexbox/ai-flex-end.png')">
+
+### Strech
+Las elementos son estirados de modo que el tamaño vertical de sus límites sea el mismo de la altura del contenedor, manteniendo sus restricciones de anchura y altura.
+```css
+.container {
+  display: flex;
+  align-items:flex-strech;
+}
+```
+<img :src="$withBase('/img/flexbox/ai-strech.png')">
+
+### Center
+Alinea todos los elementos al centro del contenedor de manera vertical manteniendo el mismo margen arriba y abajo
+```css
+.container {
+  display: flex;
+  align-items:center;
+}
+```
+<img :src="$withBase('/img/flexbox/ai-center.png')">
+
+### Baseline
+Todos los elementos son ajustados de modo que sus bases queden alineadas
+```css
+.container {
+  display: flex;
+  align-items:baseline;
+}
+```
+<img :src="$withBase('/img/flexbox/ai-baseline.png')">
+
+
+## Flex-grow
+La propiedad `flex-grow` especifica el factor de crecimiento de un elemento flexible (que tiene asignado `display:flex`), en su dirección principal. El factor de crecimiento especifica qué cantidad del espacio restante dentro del contenedor flexible, debería ocupar el item en cuestión.  
+
+La dirección principal puede ser la altura o el ancho del elemento, dependiendo del valor de `flex-direction`.  
+
+El espacio restante es el tamaño del contenedor flexible menos el tamaño de todos los elementos flexibles juntos. Si todos los ítems dentro del contenedor tienen el mismo factor de crecimiento, todos los elementos reciben la misma cantidad del espacio restante. De lo contrario, el espacio restante se distribuye en función de los diferentes factores de crecimientos de cada item.  
+
+```css
+.container {
+  display: flex;
+  flex-grow:1; /* 2 o 3 */
+}
+```
+<img :src="$withBase('/img/flexbox/flex-grow-1.png')">
+<img :src="$withBase('/img/flexbox/flex-grow-2.png')">
+<img :src="$withBase('/img/flexbox/flex-grow-3.png')">  
+
+
+## Flex-shrink
+La propiedad `flex-shrink` especifica el factor de contracción de un flex item. Los flex items se encogerán para llenar el contenedor de acuerdo a su número `flex-shrink`, cuando el tamaño por defecto de los flex items sea mayor al de su contenedor flex container.
+```css
+.container {
+  display: flex;
+  flex-shrink:1; /* 2 o 3 */
+}
+```
+<img :src="$withBase('/img/flexbox/flex-shrink-1.png')">
+<img :src="$withBase('/img/flexbox/flex-shrink-2.png')">
+<img :src="$withBase('/img/flexbox/flex-shrink-3.png')">  
+
+## Flex-basis
+La propiedad `flex-basis` especifíca la base flexible, la cual es el tamaño inicial de un elemento flexible. Ésta propiedad determina el tamaño de una caja de contenidos a no ser que se haya especificado de otra forma usando `box-sizing`.
+
+Esto define el tamaño por default de un elemento despues de distribuir el espacio entre los items.
+
+Se le puede otorgar medidas fijas como: `100px` o `20rem` o se puede utilizar el valor `auto`.
+
+```css
+.container {
+  display: flex;
+  flex-basis:200px;
+}
+```
+<img :src="$withBase('/img/flexbox/flex-basis.png')">  
+
+## Flex-flow
+La propiedad `flex-flow` es una propiedad **atajo** para las propiedades individuales `flex-direction` y `flex-wrap`.
+
+```css
+.container {
+  flex-flow:row nowrap; /* El primer valor es para flex-direction, el segundo es para flex-wrap */
+}
+```
+
+## Align-self
+Esta propiedad permite alinear items individualmente, se puede asignar diferentes posiciones de alineacion a cada uno.
+
+```css
+.container {
+  align-self:flex-start; /* flex-end etc... */
+}
+```
+<img :src="$withBase('/img/flexbox/align-self.png')">  
+
+## Flex
+La propiedad `flex` es una propiedad **atajo** para las propiedades individuales `flex-grow`, `flex-shrink` y `flex-basis`.
+
+```css
+.container {
+  flex:flex-grow flex-shrink flex-basis;
+}
+```

@@ -1,4 +1,4 @@
-const { description } = require('../../package')
+const { description } = require("../../package");
 
 module.exports = {
   markdown: {
@@ -7,21 +7,24 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Guias',
+  title: "Guias",
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  dest:'docs',
-  base:'/notebook/',
+  dest: "docs",
+  base: "/notebook/",
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ["meta", { name: "theme-color", content: "#3eaf7c" }],
+    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
+    [
+      "meta",
+      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
+    ],
   ],
 
   /**
@@ -30,131 +33,121 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
+    repo: "",
     editLinks: false,
-    docsDir: '',
-    editLinkText: '',
+    docsDir: "",
+    editLinkText: "",
     lastUpdated: false,
     nav: [
       {
-        text: 'Código y Herramientas',
-        link: '/guide/',
+        text: "Código y Herramientas",
+        link: "/guide/",
       },
       {
-        text: 'Plantillas Diseño Web',
-        link: '/templates/'
+        text: "Plantillas Diseño Web",
+        link: "/templates/",
       },
       {
-        text: 'Plugins',
-        link: '/plugins/'
+        text: "Plugins",
+        link: "/plugins/",
       },
       {
-        text: 'Guias y Tutoriales',
-        link: '/tutorials/'
-      }
+        text: "Guias y Tutoriales",
+        link: "/tutorials/",
+      },
     ],
     sidebar: {
-      '/guide/': [
+      "/guide/": [
         {
-          title: 'Guias',
+          title: "Guias",
           collapsable: true,
-          children: [
-            '',
-            'git',
-            'ssh',
-            'docker',
-          ]
+          children: ["", "git", "ssh", "docker"],
         },
         {
-          title: 'CSS',
+          title: "CSS",
           collapsable: true,
-          children: [
-            'css/flexbox.md',
-          ]
-        }
+          children: ["css/flexbox.md"],
+        },
       ],
-      '/templates/': [
+      "/templates/": [
         {
-          title: 'Templates',
+          title: "Templates",
           collapsable: true,
-          children: [
-            '',
-          ]
+          children: [""],
         },
         {
-          title: 'Componentes',
+          title: "Componentes",
           collapsable: true,
-          children: [
-            'components/buttons.md',
-          ]
+          children: ["components/buttons.md"],
         },
         {
-          title: 'Funciones especiales',
+          title: "Funciones especiales",
           collapsable: true,
-          children: [
-            'functions/waByDate.md',
-          ]
-        }
+          children: ["functions/waByDate.md"],
+        },
       ],
-      '/plugins/': [
+      "/plugins/": [
         {
-          title: 'Plugins',
+          title: "Plugins",
           collapsable: true,
-          children: [
-            '',
-          ]
-        }
+          children: [""],
+        },
       ],
-      '/tutorials/': [
+      "/tutorials/": [
         {
-          title: 'Wordpress & MarkDown',
+          title: "Wordpress & MarkDown",
           collapsable: true,
-          children: [
-            '',
-          ]
+          children: [""],
         },
         {
-          title: 'Linux',
+          title: "Linux",
           collapsable: true,
-          children: [
-            'linux/general.md',
-            'linux/linux.md',
-          ]
+          children: ["linux/general.md", "linux/linux.md"],
         },
         {
-          title: 'Android',
+          title: "Android",
           collapsable: true,
-          children: [
-            'android/android.md',
-          ]
-        }
+          children: ["android/android.md"],
+        },
       ],
-    }
+    },
   },
 
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
-    '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
-    '@vuepress/search', {
-      searchMaxSuggestions: 10
+    "@vuepress/plugin-back-to-top",
+    "@vuepress/plugin-medium-zoom",
+    "@vuepress/search",
+    {
+      searchMaxSuggestions: 10,
     },
-    '@vuepress/nprogress',
-    '@vuepress/medium-zoom', {
-      selector: 'img.zoom-custom-imgs',
+    "@vuepress/nprogress",
+    "@vuepress/medium-zoom",
+    {
+      selector: "img.zoom-custom-imgs",
       // medium-zoom options here
       // See: https://github.com/francoischalifour/medium-zoom#options
       options: {
-        margin: 16
-      }
-    },
-    'vuepress-plugin-container',
-      {
-        type: 'right',
-        defaultTitle: '',
+        margin: 16,
       },
-    'vuepress-plugin-smooth-scroll',
-  ]
-}
+    },
+    "vuepress-plugin-container",
+    {
+      type: "right",
+      defaultTitle: "",
+    },
+    "vuepress-plugin-smooth-scroll",
+    "vuepress-plugin-code-copy",
+    "vuepress-plugin-code-copy",
+    {
+      selector: String,
+      align: String,
+      color: String,
+      backgroundTransition: Boolean,
+      backgroundColor: String,
+      successText: String,
+    },
+  ],
+};
