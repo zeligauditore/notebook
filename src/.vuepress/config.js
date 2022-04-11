@@ -40,8 +40,12 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: "Código y Herramientas",
+        text: "Guias",
         link: "/guide/",
+      },
+      {
+        text: "Código y Herramientas",
+        link: "/herramientas/",
       },
       {
         text: "Plantillas Diseño Web",
@@ -52,7 +56,7 @@ module.exports = {
         link: "/plugins/",
       },
       {
-        text: "Guias y Tutoriales",
+        text: "Tutoriales",
         link: "/tutorials/",
       },
     ],
@@ -67,6 +71,21 @@ module.exports = {
           title: "CSS",
           collapsable: true,
           children: ["css/flexbox.md"],
+        },
+      ],
+      "/herramientas/": [
+        {
+          title: "Recursos Diseño Web",
+          collapsable: true,
+          children: [
+            "/herramientas/resources-dw/generadores.md",
+            "/herramientas/resources-dw/images-icons.md",
+          ],
+        },
+        {
+          title: "Web",
+          collapsable: true,
+          children: ["/herramientas/web-tools.md"],
         },
       ],
       "/templates/": [

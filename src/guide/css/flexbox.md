@@ -329,6 +329,8 @@ Esta propiedad permite alinear items individualmente, se puede asignar diferente
 ```
 <img :src="$withBase('/img/flexbox/align-self.png')">  
 
+---------------------------------------
+
 ## Flex
 La propiedad `flex` es una propiedad **atajo** para las propiedades individuales `flex-grow`, `flex-shrink` y `flex-basis`.
 
@@ -337,3 +339,4 @@ La propiedad `flex` es una propiedad **atajo** para las propiedades individuales
   flex:flex-grow flex-shrink flex-basis;
 }
 ```
+
