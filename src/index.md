@@ -4,7 +4,6 @@ heroImage: img/star.png
 tagline:
 ---
 
-
 <script>
 import SearchBox from '@SearchBox'
 
