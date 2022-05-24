@@ -200,7 +200,10 @@ module.exports = {
     "@vuepress/pwa",
     {
       serviceWorker: true,
-      updatePopup: true,
+      updatePopup: {
+        message: "Actualizar",
+        buttonText: "ok",
+      },
     },
   ],
 };

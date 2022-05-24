@@ -1,6 +1,12 @@
 {
   "name": "Guias",
   "short_name": "Guias",
+  "start_url": "/notebook/index.html",
+  "scope": "/notebook/index.html",
+  "display": "standalone",
+  "description": "Notas",
+  "background_color": "#fff",
+  "theme_color": "#0575E6",
   "icons": [
     {
       "src": "/icons/android-chrome-192x192.png",
@@ -12,9 +18,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "start_url": "/notebook/index.html",
-  "display": "standalone",
-  "background_color": "#fff",
-  "theme_color": "#0575E6"
+  ]
 }
