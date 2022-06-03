@@ -124,6 +124,11 @@ module.exports = {
           children: [""],
         },
         {
+          title: "NavBars",
+          collapsable: true,
+          children: ["navbars/navType1.md"],
+        },
+        {
           title: "Componentes",
           collapsable: true,
           children: ["components/buttons.md"],
