@@ -81,6 +81,10 @@ module.exports = {
         link: "/templates/",
       },
       {
+        text: "Librerias y FrameWorks",
+        link: "/librerias/",
+      },
+      {
         text: "Plugins",
         link: "/plugins/",
       },
@@ -109,6 +113,7 @@ module.exports = {
           children: [
             "/herramientas/resources-dw/generadores.md",
             "/herramientas/resources-dw/images-icons.md",
+            "/herramientas/resources-dw/cdns.md",
           ],
         },
         {
@@ -161,6 +166,18 @@ module.exports = {
           title: "Android",
           collapsable: true,
           children: ["android/android.md"],
+        },
+      ],
+      "/librerias/": [
+        {
+          title: "Librerias",
+          collapsable: true,
+          children: [""],
+        },
+        {
+          title: "Animaciones",
+          collapsable: true,
+          children: ["animaciones.md"],
         },
       ],
     },
