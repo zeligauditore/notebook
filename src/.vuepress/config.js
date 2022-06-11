@@ -92,6 +92,10 @@ module.exports = {
         text: "Tutoriales",
         link: "/tutorials/",
       },
+      {
+        text: "WordPress",
+        link: "/wordpress/",
+      },
     ],
     sidebar: {
       "/guide/": [
@@ -178,6 +182,27 @@ module.exports = {
           title: "Animaciones",
           collapsable: true,
           children: ["animaciones.md"],
+        },
+      ],
+      "/wordpress/": [
+        {
+          title: "Documentación",
+          collapsable: true,
+          children: [""],
+        },
+        {
+          title: "Básicos",
+          collapsable: true,
+          children: ["basicos.md"],
+        },
+        {
+          title: "Tema Básico",
+          collapsable: true,
+          children: [
+            "basic-theme/basic-theme.md",
+            "basic-theme/functions.md",
+            "basic-theme/estilos.md",
+          ],
         },
       ],
     },
