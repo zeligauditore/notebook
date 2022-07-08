@@ -119,3 +119,13 @@ Ir a la página [Smooth Shadows BRUMM](https://shadows.brumm.af/)
 
 Ir a la página [Josh Comeau - Shadow Palette Generator](https://www.joshwcomeau.com/shadow-palette/)
 <img :src="$withBase('/img/tools/resources-dw/josh.png')">
+
+
+## Shapes CSS
+[Ir a la página](https://css-tricks.com/the-shapes-of-css/)
+<img :src="$withBase('/img/tools/resources-dw/shapes.png')">
+
+
+## Badges CSS
+[Ir a la página](https://devsnap.me/css-badges)
+<img :src="$withBase('/img/tools/resources-dw/badges.png')">
