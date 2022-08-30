@@ -135,7 +135,12 @@ module.exports = {
         {
           title: "NavBars",
           collapsable: true,
-          children: ["navbars/navType1.md"],
+          children: ["navbars/navbar.md", "navbars/navType1.md"],
+        },
+        {
+          title: "Sliders",
+          collapsable: true,
+          children: ["sliders/fullScreen.md"],
         },
         {
           title: "Componentes",
@@ -164,7 +169,11 @@ module.exports = {
         {
           title: "Linux",
           collapsable: true,
-          children: ["linux/general.md", "linux/linux.md"],
+          children: [
+            "linux/general.md",
+            "linux/arch-linux.md",
+            "linux/spotify-adblock.md",
+          ],
         },
         {
           title: "Android",
@@ -212,7 +221,7 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
-    "@vuepress/plugin-back-to-top",
+    "@vuepress/back-to-top",
     "@vuepress/plugin-medium-zoom",
     "@vuepress/search",
     {
@@ -234,7 +243,6 @@ module.exports = {
       defaultTitle: "",
     },
     "vuepress-plugin-smooth-scroll",
-    "vuepress-plugin-code-copy",
     "vuepress-plugin-code-copy",
     {
       selector: String,
