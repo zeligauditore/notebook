@@ -173,6 +173,7 @@ module.exports = {
             "linux/general.md",
             "linux/arch-linux.md",
             "linux/spotify-adblock.md",
+            "linux/img-compress.md",
           ],
         },
         {

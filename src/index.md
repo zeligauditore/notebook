@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: img/nyan.gif
+heroImage: img/ngan.gif
 tagline:
 ---
 
