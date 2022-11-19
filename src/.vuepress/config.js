@@ -177,6 +177,11 @@ module.exports = {
           ],
         },
         {
+          title: "Fedora",
+          collapsable: true,
+          children: ["linux/fedora/fedora-basics.md"],
+        },
+        {
           title: "Android",
           collapsable: true,
           children: ["android/android.md"],
