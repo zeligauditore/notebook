@@ -128,7 +128,7 @@ module.exports = {
       ],
       "/templates/": [
         {
-          title: "Templates",
+          title: "Plantillas",
           collapsable: true,
           children: [""],
         },
@@ -141,6 +141,11 @@ module.exports = {
           title: "Sliders",
           collapsable: true,
           children: ["sliders/fullScreen.md"],
+        },
+        {
+          title: "Decoraciones",
+          collapsable: true,
+          children: ["decoratives/decoratives-lines.md"],
         },
         {
           title: "Componentes",
@@ -174,6 +179,8 @@ module.exports = {
             "linux/arch-linux.md",
             "linux/spotify-adblock.md",
             "linux/img-compress.md",
+            "linux/image-convert.md",
+            "linux/rar-compress.md",
           ],
         },
         {

@@ -8,4 +8,6 @@
 ## Sliders
 - [Slider a pantalla completa](./sliders/fullScreen.md)
 
-## Componentes
+## Líneas decorativas para Títulos
+
+- [Líneas arriba y abajo en títulos](./decoratives/decoratives-lines.md)
