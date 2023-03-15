@@ -148,9 +148,16 @@ module.exports = {
           children: ["decoratives/decoratives-lines.md"],
         },
         {
+          title: "Cards",
+          collapsable: true,
+          children: ["cards/icon-card-t-description.md",
+          "cards/quote-picture-description.md"
+        ],
+        },
+        {
           title: "Componentes",
           collapsable: true,
-          children: ["components/buttons.md"],
+          children: ["components/buttons-links.md"],
         },
         {
           title: "Funciones especiales",
